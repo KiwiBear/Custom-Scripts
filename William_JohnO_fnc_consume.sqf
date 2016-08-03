@@ -25,12 +25,12 @@ if ("Exile_Item_Knife" in (magazines player)) then
 		_chanceForSick = random 1;
 		if (_chanceForSick >= 0.6) then
 		{	
-			titleText ["You have contaiminated yourself and you are now sick","PLAIN"];
+			 ["ErrorTitleAndText", ["Hunting", "You have contaiminated yourself and you are now sick, sit down to recover faster"]] call ExileClient_gui_toaster_addTemplateToast;
 			call JohnO_fnc_isSick;	
 		};	
 	};
 }
 else
 {
-	titleText ["You require a knife","PLAIN DOWN"];
+	["ErrorTitleAndText", ["Hunting", "You need a knife to do this"]] call ExileClient_gui_toaster_addTemplateToast;
 };
