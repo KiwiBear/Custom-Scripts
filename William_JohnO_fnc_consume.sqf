@@ -12,7 +12,7 @@ if ("Exile_Item_Knife" in (magazines player)) then
 	sleep 10;
 
 	_weaponHolderA = createVehicle ["GroundWeaponHolder", _pos, [], 0, "CAN_COLLIDE"]; 
-	_weaponHolderA addItemCargoGlobal ["Exile_Item_BeefParts", 1];
+	_weaponHolderA addItemCargoGlobal ["Exile_Item_BeefParts", 2];
 
 
 
@@ -23,14 +23,14 @@ if ("Exile_Item_Knife" in (magazines player)) then
 	else
 	{	
 		_chanceForSick = random 1;
-		if (_chanceForSick >= 0.7) then
+		if (_chanceForSick >= 0.6) then
 		{	
-			titleText ["Gutting the animal as made you sick..Sit down and you will recover faster","PLAIN"];
+			titleText ["You have contaiminated yourself and you are now sick","PLAIN"];
 			call JohnO_fnc_isSick;	
 		};	
 	};
 }
 else
 {
-	titleText ["You need a Knife","PLAIN DOWN"];
+	titleText ["You require a knife","PLAIN DOWN"];
 };
