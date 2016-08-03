@@ -21,8 +21,7 @@ if (_oldPlayerObject isKindOf "Exile_Unit_GhostPlayer") then
 player setVariable ["ExileXM8IsOnline", (profileNamespace getVariable ["ExileEnable8GNetwork", false]), true];
 
 //Hunting
-player addAction ["Gut animal", "JohnO_fnc_consumeAnimal.sqf",true,0,false,true,"","Local player && vehicle player == player && cursorObject isKindOf 'Animal' && !alive cursorObject && (_target distance cursorObject) < 2"];
-player addAction ["Gut Human", "William_JohnO_fnc_consumeHuman.sqf",true,0,false,true,"","Local player && vehicle player == player && cursorObject isKindOf 'Man' && !alive cursorObject && (_target distance cursorObject) < 2"];
+player addAction ["Skin", "William_JohnO_fnc_consume.sqf",true,0,false,true,"","Local player && vehicle player == player && cursorObject isKindOf 'Man' && !alive cursorObject && (_target distance cursorObject) < 2"];
 
 enableSentences false;
 enableRadio false;
